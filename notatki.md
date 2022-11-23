@@ -62,7 +62,7 @@ Pełne drzewa binarne pozwalające na zbadanie maksymalnej zlożoności problemu
 Pokazuje ono wszystkie możliwe kroki w naszym algorytmie. Jedna ścieżka w drzewie jest jakimś przypadkiem działania algorytmu.  
 Aby udowodnić **minimalną** (nie koniecznie zawsze osiągalną) złożonośc algorytmu.  
 Schemat liczenia złożoności jest następujący:  
-Należy policzyć wszystkie możliwe osiągane przez nasz algorytm permutacje ciągu, będą to liście w naszym drzwie. Następnie liczbymy maksymalną ścierzkę w drzewie do liścia (czyli wysokość).  
+Należy policzyć wszystkie możliwe osiągane przez nasz algorytm permutacje ciągu, będą to liście w naszym drzwie. Następnie liczbymy maksymalną ścieżkę w drzewie do liścia (czyli wysokość).  
 Wzór: $\left\lceil\log{(\text{liczba liści})} \right\rceil$  
 Przydatną aproksymacją, jest $\log{n!} \approx n\log{n}$
 
