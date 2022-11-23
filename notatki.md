@@ -39,7 +39,7 @@ Sortowanie ciągu o dwóch możliwych wartościach.
 Stabilny oraz w miejscu algorytm o złożoności $O(n\log{n})$  
 Algorytm polega na zjandowaniu bloków 1..10..0  
 Zamieniamy takie bloki na poprawne(0..01..1) liniowo. Zauważmy, ze przy każdym wykonaniu takiego algorytmu powoduje zmniejszenie liczby bloków dwukrotnie, zatem złożonośc jest tak jak podana wyżej.  
-Algorytm można rozszeżyć aby sortował większą liczbę elementów poprzez utoższamianie elementów ze sobą. (Np dla ciągu o elementach $\{0, 1, 2\}$ najpierw utożsamiamy element 0 i 1 ze sobą sortujemy a potem elementy 1 i 2 i znowu sortujemy)
+Algorytm można rozszerzyć aby sortował większą liczbę elementów poprzez utoższamianie elementów ze sobą. (Np dla ciągu o elementach $\{0, 1, 2\}$ najpierw utożsamiamy element 0 i 1 ze sobą sortujemy a potem elementy 1 i 2 i znowu sortujemy)
 
 ### Sortowanie przez zliczanie (bucket sort)
 Algorytm stabilny, **ale nie w miejscu**  
@@ -62,7 +62,7 @@ Pełne drzewa binarne pozwalające na zbadanie maksymalnej zlożoności problemu
 Pokazuje ono wszystkie możliwe kroki w naszym algorytmie. Jedna ścieżka w drzewie jest jakimś przypadkiem działania algorytmu.  
 Aby udowodnić **minimalną** (nie koniecznie zawsze osiągalną) złożonośc algorytmu.  
 Schemat liczenia złożoności jest następujący:  
-Należy policzyć wszystkie możliwe osiągane przez nasz algorytm permutacje ciągu, będą to liście w naszym drzwie. Następnie liczbymy maksymalną ścierzkę w drzewie do liścia (czyli wysokość).  
+Należy policzyć wszystkie możliwe osiągane przez nasz algorytm permutacje ciągu, będą to liście w naszym drzwie. Następnie liczbymy maksymalną ścieżkę w drzewie do liścia (czyli wysokość).  
 Wzór: $\left\lceil\log{(\text{liczba liści})} \right\rceil$  
 Przydatną aproksymacją, jest $\log{n!} \approx n\log{n}$
 
