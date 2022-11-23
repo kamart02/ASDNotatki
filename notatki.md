@@ -1,5 +1,5 @@
 # Notatki z ASD do 1 kolokwium
-Wersja 0.1 z dnia 23.11.2022
+Wersja 0.2 z dnia 23.11.2022
 
 ## Najważniejsze algorytmy sortowań
 
