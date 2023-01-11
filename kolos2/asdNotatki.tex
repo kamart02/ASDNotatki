@@ -1,0 +1,71 @@
+\documentclass[10pt,a4paper,twocolumn]{article}
+
+\usepackage{multicol}
+\usepackage{amsbsy, amssymb, latexsym, amsmath, braket}
+\usepackage[tiny]{titlesec}
+\usepackage[hmargin=0.5cm,vmargin=0.7cm]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{polski}
+\usepackage{scalefnt}
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{commath}
+\usepackage{graphicx}
+
+\graphicspath{ {./images} }
+
+% Potrzebne do algorytmu Euklidesa.
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+\newcommand{\angles}[1]{\left\langle #1 \right\rangle}
+
+
+\newcommand{\entry}{$\bullet$\hspace{0.15em}}
+\newcommand{\subentry}{$\circledcirc$\hspace{0.15em}}
+% https://tex.stackexchange.com/a/7045/80219
+\newcommand{\textsubentry}[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};\hspace{0.15em}}}
+
+% Automatyczne generowanie listy liczby pierwszych:
+% https://tex.stackexchange.com/a/134320/80219
+\makeatletter
+\def\primes#1#2{{%
+  \def\comma{\def\comma{, }}%
+  \count@\@ne\@tempcntb#2\relax\@curtab#1\relax
+  \@primes}}
+\def\@primes{\loop\advance\count@\@ne
+\expandafter\ifx\csname p-\the\count@\endcsname\relax
+\ifnum\@tempcntb<\count@\else
+  \ifnum\count@<\@curtab\else\comma\the\count@\fi\fi\else\repeat
+\@tempcnta\count@\loop\advance\@tempcnta\count@
+\expandafter\let\csname p-\the\@tempcnta\endcsname\@ne
+\ifnum\@tempcnta<\@tempcntb\repeat
+\ifnum\@tempcntb>\count@\expandafter\@primes\fi}
+\makeatother
+
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+
+% Wyłącz numerowanie stron.
+\pagenumbering{gobble}
+
+\setlength{\parindent}{0pt}
+% Odległość pomiędzy liniami. Zmniejsz, jeżeli brakuje miejsca.
+\setlength{\parskip}{0.5ex}
+
+\title{Notatki ASD}
+
+\begin{document}
+% Rozmiar czcionki.
+\scalefont{.48}
+
+\text{\tiny{
+    Wersja z \today\ o \currenttime\ (\pdfmdfivesum file{./karta-wzorow.tex})
+}}
+
+\input{src/drzewa.tex}
+\input{src/algorytmyGrafowe.tex}
+\input{src/kolorowanie.tex}
+
+\end{document}
